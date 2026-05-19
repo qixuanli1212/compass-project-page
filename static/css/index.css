@@ -18,7 +18,7 @@ body {
   background: #ffffff;
   color: var(--ink);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -49,7 +49,7 @@ a {
 
 .venue-tag {
   color: var(--accent-2);
-  font-size: 0.85rem;
+  font-size: 2.0rem;
   font-weight: 800;
   letter-spacing: 0;
   margin-bottom: 1rem;
@@ -58,7 +58,7 @@ a {
 
 .publication-title {
   color: var(--ink);
-  font-size: clamp(2.1rem, 5vw, 4.2rem) !important;
+  font-size: clamp(1.8rem, 4vw, 3.4rem) !important;
   font-weight: 800 !important;
   letter-spacing: 0;
   line-height: 1.08 !important;
@@ -75,21 +75,21 @@ a {
 
 .author-block {
   display: inline-block;
-  margin: 0 0.35rem 0.35rem;
+  margin: 0 0.5rem 0.5rem;
 }
 
 .publication-affiliations {
   color: var(--muted);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 1rem;
+  gap: 0.5rem 1rem;
   justify-content: center;
   margin-bottom: 0.3rem;
 }
 
 .contribution-note {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 1.4rem;
 }
 
@@ -139,13 +139,13 @@ a {
 }
 
 .wide-figure {
-  max-height: 620px;
+  max-height: 610px;
 }
 
 .wide-figure img {
   display: block;
   height: auto;
-  margin-top: -5%;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -163,10 +163,26 @@ a {
 
 .teaser-caption {
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   margin: 1rem auto 0;
   max-width: 900px;
   text-align: center;
+}
+
+.video-wrapper {
+  aspect-ratio: 16 / 9;
+  margin: 2rem auto 0;
+  max-width: 960px;
+  width: 100%;
+}
+
+.video-wrapper iframe {
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .title.is-3 {
@@ -178,7 +194,7 @@ a {
 
 .publication-body {
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.5rem;
 }
 
 .publication-body p {
@@ -188,6 +204,14 @@ a {
 .method-list {
   display: grid;
   gap: 1rem;
+}
+
+.method-figure {
+  margin-bottom: 1.25rem;
+}
+
+.method-list-wide {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .method-list div,
@@ -209,6 +233,33 @@ a {
 .method-list p,
 .body-copy {
   color: var(--muted);
+}
+
+.benchmark-figure {
+  margin-bottom: 1.25rem;
+}
+
+.benchmark-copy {
+  font-size: 1.25rem;
+  margin: 0 auto;
+  max-width: 980px;
+  text-align: center;
+}
+
+.result-main-figure {
+  margin-bottom: 1.5rem;
+}
+
+.result-detail {
+  align-items: center;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+}
+
+.result-copy {
+  font-size: 1.25rem;
+  margin: 0;
 }
 
 .metric-grid {
@@ -322,4 +373,11 @@ code {
     grid-template-columns: 1fr;
   }
 
+  .method-list-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .result-detail {
+    grid-template-columns: 1fr;
+  }
 }
