@@ -169,8 +169,7 @@ a {
   text-align: center;
 }
 
-.title.is-3,
-.bibtex-header .title {
+.title.is-3 {
   color: var(--ink);
   font-weight: 800 !important;
   letter-spacing: 0;
@@ -255,30 +254,6 @@ code {
   color: var(--ink) !important;
 }
 
-.bibtex-header {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-}
-
-.copy-bibtex-btn {
-  align-items: center;
-  background: var(--accent);
-  border: 0;
-  border-radius: var(--radius);
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-flex;
-  font-weight: 800;
-  gap: 0.5rem;
-  padding: 0.7rem 1rem;
-}
-
-.copy-bibtex-btn.copied {
-  background: #2b8a3e;
-}
-
 .scroll-to-top {
   align-items: center;
   background: var(--dark);
@@ -347,8 +322,4 @@ code {
     grid-template-columns: 1fr;
   }
 
-  .bibtex-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
 }
